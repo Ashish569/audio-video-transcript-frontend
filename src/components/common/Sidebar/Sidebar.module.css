@@ -1,0 +1,83 @@
+/* src/components/common/Sidebar/Sidebar.module.css */
+
+.sidebar {
+  width: 240px;
+  height: 100vh;
+  background: #111827; /* dark slate */
+  color: #f3f4f6;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #1f2937;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.logo {
+  padding: 1.5rem 1.25rem;
+  border-bottom: 1px solid #1f2937;
+}
+
+.logo h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #6366f1; /* indigo accent */
+  margin: 0;
+}
+
+.nav {
+  flex: 1;
+  padding: 1rem 0;
+}
+
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navItem {
+  width: 100%;
+  padding: 0.875rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: transparent;
+  border: none;
+  color: #d1d5db;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+
+.navItem:hover {
+  background: #1f2937;
+  color: #f3f4f6;
+}
+
+.navItem.active {
+  background: #374151;
+  color: #fff;
+  border-left: 4px solid #6366f1;
+  font-weight: 500;
+}
+
+.icon {
+  font-size: 1.25rem;
+  width: 24px;
+  text-align: center;
+}
+
+.footer {
+  padding: 1.5rem 1.25rem;
+  border-top: 1px solid #1f2937;
+  font-size: 0.8rem;
+  color: #9ca3af;
+  text-align: center;
+}
+
+.footer p {
+  margin: 0.25rem 0;
+}

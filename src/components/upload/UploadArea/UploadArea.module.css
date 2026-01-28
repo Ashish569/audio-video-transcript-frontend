@@ -1,0 +1,175 @@
+/* src/components/upload/UploadArea/UploadArea.module.css */
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.dropZone {
+  border: 3px dashed #9ca3af;
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  background: #f9fafb;
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.dropZone.active {
+  border-color: #6366f1;
+  background: #eef2ff;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.2);
+}
+
+.dropZone.uploading {
+  border-color: #10b981;
+  background: #ecfdf5;
+  pointer-events: none;
+}
+
+.fileInput {
+  display: none;
+}
+
+.content {
+  pointer-events: none; /* so drag events bubble to parent */
+}
+
+.icon {
+  font-size: 2.4rem; /* was 3.5rem */
+  margin-bottom: 0.75rem;
+  color: #6366f1;
+}
+
+.text {
+  font-size: 1.25rem;
+  color: #374151;
+  margin-bottom: 1.5rem;
+}
+
+.text strong {
+  color: #111827;
+}
+
+.button {
+  padding: 0.75rem 2rem;
+  background: #6366f1;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+  pointer-events: auto;
+}
+
+.button:hover:not(:disabled) {
+  background: #4f46e5;
+}
+
+.button:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+.hint {
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+  color: #6b7280;
+}
+
+.progressContainer {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.progressBar {
+  height: 12px;
+  background: #e5e7eb;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+}
+
+.progressFill {
+  height: 100%;
+  background: #10b981;
+  transition: width 0.3s ease;
+}
+
+.progressText {
+  font-size: 1rem;
+  color: #374151;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dropZone {
+    padding: 3rem 1.5rem;
+  }
+
+  .icon {
+    font-size: 3rem;
+  }
+
+  .text {
+    font-size: 1.1rem;
+  }
+}
+/* Loader overlay */
+.loaderOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  border-radius: 12px;
+}
+
+.loader {
+  text-align: center;
+  color: white;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #6366f1;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1rem;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* Success message after upload */
+.successMessage {
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #10b981; /* green */
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

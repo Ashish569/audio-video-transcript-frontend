@@ -1,0 +1,120 @@
+/* src/components/upload/UploadHistory/UploadHistory.module.css */
+
+.historyContainer {
+  margin-top: 3rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.header h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.refreshButton {
+  padding: 0.5rem 1rem;
+  background: #6366f1;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.refreshButton:hover {
+  background: #4f46e5;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.info {
+  flex: 1;
+}
+
+.name {
+  font-weight: 500;
+  color: #111827;
+  margin-bottom: 0.25rem;
+}
+
+.meta {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.meta span + span {
+  margin: 0 0.5rem;
+  color: #d1d5db;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.statusUploaded {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+.statusProcessing {
+  background: #fef3c7;
+  color: #92400e;
+}
+.statusCompleted {
+  background: #d1fae5;
+  color: #065f46;
+}
+.statusFailed {
+  background: #fee2e2;
+  color: #991b1b;
+}
+.statusPending {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.errorHint {
+  color: #ef4444;
+  cursor: help;
+  font-weight: bold;
+}
+
+.empty {
+  text-align: center;
+  color: #6b7280;
+  padding: 3rem 1rem;
+  background: white;
+  border-radius: 12px;
+  border: 1px dashed #d1d5db;
+}
